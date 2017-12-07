@@ -200,7 +200,7 @@
     <Content Include="Views\Home\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Resources\" />
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
