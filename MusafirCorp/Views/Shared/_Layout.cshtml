@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M-Corp Computer , Printer , Network Maintenance , Software , Mobile App Devlopment </title>
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery") 
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/materialize")
     @Scripts.Render("~/bundles/modernizr")
+    
     <script type = 'text/javascript' >
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        });
+
         var appInsights=window.appInsights||function(config)
         {
             function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
@@ -21,29 +29,31 @@
     
 
 </head>
-<body>
- <!--   <video src="~/App_Data/circuitboard-orange.mp4"  autoplay style="height:100%;width:100%;position: absolute;z-index: -10000;opacity: 0.4;"> </video>   -->
+<body style="background-color:cornsilk">
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("M-Corp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="~/" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Carrier", "Carrier", "Home")</li>
+            </ul>
+
+            <ul class="side-nav" id="mobile-demo">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Carrier", "Carrier", "Home")</li>
+            </ul>
         </div>
-    </div>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -52,8 +62,8 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    
+    
     @RenderSection("scripts", required: false)
     
     }

@@ -33,6 +33,10 @@ namespace MusafirCorp.Controllers
             return View();
         }
 
+        public ActionResult Carrier()
+        {
+            return View();
+        }
         
     }
 }
