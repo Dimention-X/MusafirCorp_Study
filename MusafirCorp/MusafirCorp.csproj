@@ -160,7 +160,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\circuitboard-orange.mp4" />
+    <Content Include="Content\Media\circuitboard-orange.mp4" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Media\M-Corp Logo.png" />
@@ -203,6 +203,7 @@
     <Content Include="Views\Home\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
