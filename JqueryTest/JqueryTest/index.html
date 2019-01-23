@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Sample Trip </title>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1 id="h1"> Hello H1</h1>
+    <h1 class="demo-md"> Hello H2</h1>
+    <h1 class="demo"> Hello H3</h1>
+    <h1 custom="banner"> Hello H4</h1>
+    <h1 class="demo-md"> Hello H5</h1>
+
+    <nav>
+        <a href="#"></a>
+    </nav>
+
+    <nav>
+        <ol>
+            <li> <a href="#"></a></li>
+        </ol>
+    </nav>
+
+
+    <script>
+        $(function () {
+            $('h1.demo').text('Hello JQuery');
+            $('#h1').text('Hello bc');
+            $('[custom="banner"]').text('Dond liya bc!');
+            // $('[class^="demo"]').text('Starts with');
+            $('[class*="md"]').text('class contains the string');
+        });
+    </script>
+</body>
+</html>

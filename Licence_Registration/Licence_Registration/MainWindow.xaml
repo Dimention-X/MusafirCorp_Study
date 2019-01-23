@@ -1,0 +1,117 @@
+﻿<Window x:Class="Licence_Registration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Licence_Registration"
+        mc:Ignorable="d"
+        Title="MainWindow" WindowStyle="None" Background="LightSalmon" Height="450" Width="500" Icon="bill_icon_cQg_icon.ico" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <GroupBox x:Name="Registration_Details"
+                  Header="USER Registration"
+                  FontWeight="DemiBold"
+                  FontSize="20"
+                  >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0">
+                    <Label Content=" Your Name :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_Name"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0"
+                            Grid.Row="1">
+                    <Label Content=" Mobile No. :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_Mobile_No"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0"
+                            Grid.Row="2">
+                    <Label Content=" Address      :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_Address"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="68,0,0,0"
+                            Grid.Row="3">
+                    <Label Content=" Money Paid :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_MoneyPaid"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0"
+                            Grid.Row="4">
+                    <Label Content=" Yearly Plan  :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_Yearly_Plan"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0"
+                            Grid.Row="5">
+                    <Label Content="Licence Key  :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <TextBox x:Name="Txt_Licence_Key"
+                             Width="200"
+                             Height="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="70,0,0,0"
+                            Grid.Row="6">
+                    <Label Content=" Start Date   :"
+                           FontWeight="Normal"
+                           Height="30"
+                           FontSize="15"></Label>
+                    <DatePicker x:Name="Txt_StartDate"
+                             Width="200"
+                             Height="40"></DatePicker>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <Button Grid.Row="1"
+                x:Name="Submit"
+                Width="100"
+                Height="30"
+                Content="Submit"
+                Click="Submit_Click">
+        </Button>
+    </Grid>
+</Window>
